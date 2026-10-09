@@ -1,23 +1,108 @@
- <!DOCTYPE html>
-
- <html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    <title>Halo dunia ak gak jadi stres</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Universitas Kristen Petra</title>
 </head>
 <body>
-   <h1>woi ak stres tolong lah</h1>
-    <br>
-    <a href="https://www.youtube.com" target=_blank title="wsadaoilah">
-    awkoawkoaw  
-    </a>   
-    
-    <hr>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quasi impedit, suscipit similique odio nostrum iste eaque laboriosam voluptates alias velit veniam rerum dolor quia molestias exercitationem dolores hic fugiat!</p>
-    <!-- waokwkaoawokaw -->
+
+    <!-- Main Wrapper Page -->
+    <div class="home-page">
+
+        <!-- Background Image Container -->
+        <div class="hero-background">
+            <img src="h.jpg" alt="Library Background">
+        </div>
+
+        <!-- Header Section -->
+        <header>
+            <!-- Top Orange Banner -->
+            <div class="top-banner">
+                
+                <!-- Left Title & Hashtag -->
+                <div class="brand-text">
+                    <p class="university-name">Perpustakaan Universitas Kristen Petra</p>
+                    <p class="hashtag">#ThatsMyLibrary</p>
+                </div>
+
+                <!-- Logos Center Group -->
+                <div class="logo-group">
+                    <img src="logo-petra-christian-university-png-svg-removebg-preview.png" alt="Universitas Kristen Petra Logo" class="university-logo">
+                    <hr class="vertical-divider">
+                    <img src="logo-perpus-petra-removebg-preview.png" alt="Library @ Petra Logo" class="library-logo">
+                </div>
+
+                <!-- Right Language Selector -->
+                <div class="language-selector">
+                    <a href="#" class="lang-option active">ID</a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-option">EN</a>
+                </div>
+
+            </div>
+
+            <!-- Navigation Bar Container -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active">HOME</a></li>
+                    <li><a href="#" class="nav-link">ABOUT</a></li>
+                    <li><a href="#" class="nav-link">SUBMISSIONS</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link">
+                            SERVICE 
+                            <span class="arrow-down">&#9660;</span>
+                        </a>
+                    </li>
+                    <li><a href="#" class="nav-link">HISTORY</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main>
+
+            <!-- Search Bar Section -->
+            <section class="search-container">
+                <form action="#" method="GET" class="search-form">
+                    <input 
+                        type="text" 
+                        name="search" 
+                        class="search-input" 
+                        placeholder="What are you looking for?"
+                        aria-label="What are you looking for?"
+                    >
+                    <button type="submit" class="search-button" aria-label="Search">
+                        <img src="images-removebg-preview.png" alt="Search Icon">
+                    </button>
+                </form>
+            </section>
+
+            <!-- Category Tabs Section -->
+            <section class="category-tabs">
+                <div class="tab-container">
+                    <a href="#" class="tab-item">BOOKS</a>
+                    <a href="#" class="tab-item">JOURNAL</a>
+                    <a href="#" class="tab-item">DOCUMENT</a>
+                </div>
+            </section>
+
+            <!-- Bottom-Right Floating "Ask Here!" Chat Widget -->
+            <aside class="ask-here-widget">
+                <div class="mascot-container">
+                    <img src="original-4a077a23083ed68ca44a078bb766de1f-removebg-preview.png" alt="Library Mascot" class="mascot-img">
+                </div>
+                <button type="button" class="ask-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16Z"/>
+                    </svg>
+                    <span>Ask Here!</span>
+                </button>
+            </aside>
+
+        </main>
+
+    </div>
 
 </body>
-
-
- </html>
+</html>
