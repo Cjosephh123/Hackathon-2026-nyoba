@@ -1,0 +1,42 @@
+/* Design tokens live on .home-page so they never touch the rest of your app.
+   Change the colours here. */
+.home-page,
+.app-shell {
+  --home-accent: #c0651a;
+  --home-accent-dark: #a05314;
+  --home-ink: #1b1b1b;
+  --home-muted: #7a7a7a;
+  --home-border: #d9dde3;
+  --home-error: #b3261e;
+  --home-surface-accent: #fff3e8;
+  --home-card-border: #ececec;
+  --home-rule: #e8806a;
+  --home-font: 'Ubuntu', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.home-page {
+  font-family: var(--home-font);
+  color: var(--home-ink);
+}
+
+.home-page *,
+.home-page *::before,
+.home-page *::after,
+.app-shell *,
+.app-shell *::before,
+.app-shell *::after {
+  box-sizing: border-box;
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .home__grid {
+    grid-template-columns: 1fr;
+  }
+}
