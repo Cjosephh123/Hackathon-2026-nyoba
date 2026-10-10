@@ -1,0 +1,114 @@
+.assistant-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  max-width: min(88%, 780px);
+  margin: 0 0 1.35rem;
+}
+
+.assistant-message--user {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.assistant-message__avatar {
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background: #f28b30;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.assistant-message__body {
+  min-width: 0;
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  background: #fff7ef;
+  color: #39332e;
+}
+
+.assistant-message--user .assistant-message__body {
+  background: #f28b30;
+  color: #fff;
+}
+
+.assistant-message__text {
+  overflow-wrap: anywhere;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.assistant-message__text > :first-child {
+  margin-top: 0;
+}
+
+.assistant-message__text > :last-child {
+  margin-bottom: 0;
+}
+
+.assistant-message__text p {
+  margin: 0 0 0.75rem;
+}
+
+.assistant-message__text h1,
+.assistant-message__text h2,
+.assistant-message__text h3,
+.assistant-message__text h4 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.assistant-message__text ul,
+.assistant-message__text ol {
+  margin: 0.4rem 0 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.assistant-message__text li + li {
+  margin-top: 0.3rem;
+}
+
+.assistant-message__text pre {
+  overflow-x: auto;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: rgb(0 0 0 / 6%);
+  white-space: pre;
+}
+
+.assistant-message__text code {
+  padding: 0.1rem 0.25rem;
+  border-radius: 0.25rem;
+  background: rgb(0 0 0 / 6%);
+  font-size: 0.9em;
+}
+
+.assistant-message__text pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.assistant-message__text img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 16rem);
+  max-height: 24rem;
+  margin: 0.75rem 0;
+  border-radius: 0.45rem;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgb(40 30 20 / 12%);
+}
+
+.assistant-message__attachment {
+  margin: 0.7rem 0 0;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgb(100 80 60 / 18%);
+  font-size: 0.78rem;
+  opacity: 0.85;
+}
