@@ -184,18 +184,3 @@ Follow these steps to run and inspect the project locally:
 
 4. **Open in Browser:**
    Navigate to `http://localhost:5173` (or the URL output in your terminal).
-
----
-
-## 📑 Evaluation Cheat Sheet for the Jury
-
-When evaluating this platform, we recommend testing the following paths:
-
-1. **Catalog Search & Filtering:** Try typing keywords (e.g., *"Database"*, *"Artificial Intelligence"*) into the search bar and filter by category simultaneously. Note the instant memoized rendering.
-2. **Borrowing Logic Test:** Click on an available book, view its details, and click **Borrow**. Observe state changes in your profile dashboard.
-3. **Role Switching / View Toggle:** Switch between **Student View** and **Admin Dashboard** to inspect how the interface adapts to different user roles.
-4. **Responsive Layout:** Resize the browser or switch to mobile view to test UI responsiveness.
-
----
-
-*Developed for the PENS Academic Community.*
