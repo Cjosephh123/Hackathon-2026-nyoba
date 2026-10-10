@@ -1,4 +1,3 @@
-[readme_file.md](https://github.com/user-attachments/files/33272778/readme_file.md)
 # 📚 PENS Digital Library Platform
 
 An integrated, modern digital library management system designed for **Politeknik Elektronika Negeri Surabaya (PENS)**. This platform streamlines academic resource management, digital catalog browsing, book borrowing workflows, and library analytics for students, faculty, and administrators.
@@ -17,28 +16,70 @@ An integrated, modern digital library management system designed for **Politekni
 
 ---
 
-## 🎯 Project Overview
+---
 
-The **PENS Digital Library Platform** addresses the challenge of managing both physical and digital academic repositories efficiently. Built with a responsive, single-page application (SPA) architecture, it offers real-time catalog search, automated borrowing/return processing, role-based access control (RBAC), and administrative reporting.
+## 🤖 Fitur Utama: Dual-Engine AI Assistant
+
+Modul AI Assistant dirancang dengan arsitektur dua peran (Siswa & Staf Pustakawan) yang beroperasi secara real-time di atas database katalog dan data log IoT perpustakaan.
+
+### 1. AI Assistant untuk Siswa (Smart Book Consultation & Matching)
+* **Konsultasi & Rekomendasi Buku Personal:** Siswa dapat berkonsultasi mengenai topik belajar, tugas akhir, atau minat baca melalui interaksi percakapan alami.
+* **Verifikasi Real-Time Database:** Setiap rekomendasi buku di-match secara langsung dengan ketersediaan stok fisik, nomor panggil (call number), dan lokasi rak dalam database perpustakaan.
+* **Pencarian Konseptual (Semantic Search):** Siswa dapat mencari buku berdasarkan deskripsi konteks (contoh: *"Saya mau belajar dasar pemrograman Python untuk analisis data"*), dan AI akan mereferensikan buku yang relevan di rak.
 
 ---
 
-## ✨ Key Features
-
-### 👨‍🎓 Student / Borrower Features
-* **Smart Catalog Search:** Multi-attribute filtering (title, author, ISBN, category, availability).
-* **Digital Preview & Reading:** Direct access to PDF/e-Book summaries and research publications.
-* **Borrowing & Reservation:** One-click reservation system with automated due-date calculation.
-* **User Dashboard:** Active loans history, overdue alerts, and personalized reading recommendations.
-
-### 🛡️ Admin & Staff Features
-* **Inventory Management:** Full CRUD operations for books, thesis archives, and digital journals.
-* **Circulation Control:** Streamlined checkout, check-in, and fine assessment workflow.
-* **Analytics Dashboard:** Real-time metrics on circulation frequency, popular categories, and active users.
+### 2. AI untuk Staf & Pustakawan (Analytics & Inventory Intelligence)
+* **Analisis Penggunaan & Tren Perpustakaan:** Staf dapat berkonsultasi secara interaktif mengenai data statistik perpustakaan (contoh: *"Buku kategori apa yang paling sering dipinjam bulan ini?"* atau *"Berapa rata-rata durasi peminjaman buku IoT?"*).
+* **Integrasi IoT NFC Reader Smart Rack:**
+  * Setiap rak buku dilengkapi dengan modul NFC Reader untuk mendeteksi pergerakan fisik buku (check-in, check-out, misplacement) secara otomatis tanpa manual scanning.
+  * Data deteksi NFC langsung diteruskan ke AI untuk memperbarui status ketersediaan dan log aktivitas secara real-time.
+* **Analisis Kekurangan Katalog (Catalog Gap Analysis):**
+  * AI menganalisis riwayat pencarian siswa yang tidak membuahkan hasil (unmatched queries), tren peminjaman yang overbooked, serta perbandingan kebutuhan akademis.
+  * AI memberikan saran proaktif kepada staf mengenai judul, kriteria, atau subjek buku yang perlu ditambah/dibeli untuk melengkapi koleksi perpustakaan.
 
 ---
 
-## 🔄 System Architecture & Workflow
+## 📐 Arsitektur Alur Sistem (AI & NFC Integration)
+[ Siswa / Pustakawan ]
+│
+▼
+[ Interface AI Assistant ] ──(Natural Language Query)
+│
+├──► Mode Siswa ──► RAG Engine ──► Sync DB Perpustakaan ──► Lokasi Rak & Stok
+│
+└──► Mode Staf  ──► Analytics Engine ┬──► Log Transaksi DB
+├──► NFC Smart Rack Stream (IoT)
+└──► Unmet Search Query Log (Gap Analysis)
+
+---
+
+## 📊 Alur Kerja Modul Pintar
+
+### Workflow Konsultasi Siswa
+1. **Input Query:** Siswa memasukkan pertanyaan atau topik kebutuhan.
+2. **Retrieval-Augmented Generation (RAG):** AI melakukan pencarian vektor (Vector Search) pada database katalog perpustakaan.
+3. **Filter Ketersediaan:** Sistem memverifikasi status peminjaman buku.
+4. **Respon Cerdas:** AI memberikan ringkasan rekomendasi beserta posisi rak dan jumlah eksemplar yang tersedia.
+
+### Workflow Tracking NFC & Analisis Staf
+1. **Pergerakan Buku:** Tag NFC pada buku terdeteksi oleh NFC Reader di rak.
+2. **Log System Update:** Perubahan status (masuk/keluar rak) tercatat otomatis di database.
+3. **Analisis AI:** AI mengolah data log untuk menghasilkan wawasan penggunaan rak, frekuensi baca di tempat, dan rekomendasi pengadaan koleksi baru.
+
+---
+
+## 🛠️ Ringkasan Fitur AI & Fitur Utama Sistem
+
+| Peran Pengguna | Fitur AI / Teknologi | Fungsi Utama |
+| :--- | :--- | :--- |
+| **Siswa** | AI Consultation & DB Sync | Konsultasi bacaan, rekomendasi relevan, cek stok real-time |
+| **Staf** | AI Analytics Copilot | Query statistik penggunaan, tren peminjaman, performa koleksi |
+| **Staf** | AI Catalog Gap Detector | Deteksi otomatis topik/katalog yang kurang di perpustakaan |
+| **Sistem / Rak**| NFC Reader Array (IoT) | Tracking otomatis posisi & pergerakan keluar-masuk buku |
+
+
+[readme_file.md](https://github.com/user-attachments/files/33272874/readme_file.md)
 
 ### 1. High-Level Data & Interaction Flow
 
@@ -112,6 +153,7 @@ The **PENS Digital Library Platform** addresses the challenge of managing both p
 └── assets / data              # Mock dataset containing books, categories, and users
 ```
 
+---
 ---
 
 ## 🚀 Quick Start Guide for Judges
